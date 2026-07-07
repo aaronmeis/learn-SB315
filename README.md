@@ -30,23 +30,6 @@ A live demo is available once deployed to GitHub Pages (see badge above).
 - **Penalties**: Up to $1M per violation, $3M for repeats
 - **Effective**: January 1, 2027
 
-## Getting Started Locally
-
-```bash
-# Clone the repo
-git clone https://github.com/your-username/learn-SB315.git
-cd learn-SB315
-
-# Open the page
-# On macOS/Linux:
-open index.html
-
-# On Windows:
-start index.html
-```
-
-Or simply drag `index.html` into any browser.
-
 ## Deploying to GitHub Pages
 
 This is a static single-file site that works out of the box with GitHub Pages.
