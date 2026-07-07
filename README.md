@@ -47,7 +47,7 @@ This is a static single-file site that works out of the box with GitHub Pages.
 
 4. Click **Save**.
 
-Your copy will be live at `https://aaronmeis.github.io/learn-SB315`.
+Your copy will be live at `https://your-username.github.io/learn-SB315`.
 
 > The included `.nojekyll` file prevents GitHub from processing the site with Jekyll.
 
