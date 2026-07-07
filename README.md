@@ -1,6 +1,6 @@
 # Illinois SB 315 • AI Safety Measures Act
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deploy-blue?logo=github)](https://your-username.github.io/learn-SB315)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Deploy-blue?logo=github)](https://aaronmeis.github.io/learn-SB315)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
 
 **Interactive guide to Illinois Senate Bill 315** (Public Act 104-0538) — the landmark 2026 frontier AI safety law.
@@ -47,7 +47,7 @@ This is a static single-file site that works out of the box with GitHub Pages.
 
 4. Click **Save**.
 
-Your copy will be live at `https://your-username.github.io/learn-SB315`.
+Your copy will be live at `https://aaronmeis.github.io/learn-SB315`.
 
 > The included `.nojekyll` file prevents GitHub from processing the site with Jekyll.
 
