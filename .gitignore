@@ -1,0 +1,36 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Build / Temp (if any future tooling)
+dist/
+build/
+node_modules/
+.cache/
+
+# GitHub Pages / Misc
+_site/
+.sass-cache/
+
+# Personal / Local only
+*.local
+notes/
+scratch/

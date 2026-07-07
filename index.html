@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illinois SB 315 • Artificial Intelligence Safety Measures Act</title>
+    <meta name="description" content="Interactive guide to Illinois SB 315 (Public Act 104-0538) — the landmark 2026 frontier AI safety law. Searchable provisions, audits, timeline, and compliance tools.">
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Illinois SB 315 — AI Safety Measures Act">
+    <meta property="og:description" content="One of the strongest U.S. state AI laws. Explore requirements, audits, and timeline in this interactive single-page guide.">
+    <meta property="og:url" content="https://YOUR-USERNAME.github.io/learn-SB315">
+    <meta property="og:image" content="https://YOUR-USERNAME.github.io/learn-SB315/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Illinois SB 315 • AI Safety Measures Act">
+    <meta name="twitter:description" content="Interactive explorer for Illinois' landmark 2026 frontier AI safety law.">
+    
+    <!-- GitHub Pages friendly -->
+    <link rel="canonical" href="https://YOUR-USERNAME.github.io/learn-SB315">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --primary: #0f172a;
+        }
+        
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .font-display {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+        }
+
+        .section-header {
+            font-family: 'Space Grotesk', 'Inter', system_ui, sans-serif;
+            font-weight: 600;
+            letter-spacing: -.025em;
+        }
+
+        .nav-active {
+            color: #0ea5e9;
+            border-bottom: 2px solid #0ea5e9;
+        }
+
+        .law-card {
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .law-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+
+        .provision {
+            transition: all 0.2s ease;
+        }
+
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        .timeline-dot {
+            box-shadow: 0 0 0 4px #f1f5f9;
+        }
+
+        .filter-active {
+            background-color: #0ea5e9;
+            color: white;
+            border-color: #0ea5e9;
+        }
+
+        .toc-link {
+            transition: all 0.1s ease;
+        }
+        
+        .toc-link:hover {
+            color: #0ea5e9;
+            transform: translateX(2px);
+        }
+
+        .key-fact {
+            background: linear-gradient(145deg, #f8fafc, #f1f5f9);
+        }
+
+        .dark .key-fact {
+            background: linear-gradient(145deg, #1e293b, #0f172a);
+        }
+
+        .legal-text {
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .nav-sticky {
+            backdrop-filter: blur(12px);
+        }
+
+        .highlight {
+            background-color: #fefce8;
+            padding: 1px 3px;
+            border-radius: 3px;
+        }
+
+        .dark .highlight {
+            background-color: #422006;
+        }
+
+        .spa-container {
+            max-width: 1280px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .provision-card {
+            border-left: 4px solid #0ea5e9;
+        }
+
+        .metric {
+            font-size: 1.85rem;
+            line-height: 1;
+            font-weight: 700;
+            font-family: 'Space Grotesk', system_ui, sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-200">
+    <!-- Top Bar -->
+    <div class="bg-slate-900 text-white py-2 text-sm">
+        <div class="max-w-screen-xl mx-auto px-6 flex items-center justify-between">
+            <div class="flex items-center gap-x-3">
+                <div class="flex items-center gap-x-2">
+                    <i class="fa-solid fa-balance-scale text-sky-400"></i>
+                    <span class="font-medium tracking-tight">Public Act 104-0538</span>
+                </div>
+                <div class="hidden sm:block px-3 py-0.5 rounded-full bg-emerald-500/20 text-emerald-400 text-xs font-medium">SIGNED INTO LAW • JULY 6, 2026</div>
+            </div>
+            <div class="flex items-center gap-x-4 text-xs">
+                <a href="https://www.ilga.gov/Legislation/BillStatus?DocNum=315&amp;DocTypeID=SB&amp;GA=104&amp;GAID=18&amp;SessionID=114" target="_blank" class="hover:text-sky-400 flex items-center gap-x-1">
+                    <span>Official ILGA Page</span> <i class="fa-solid fa-external-link-alt text-[10px]"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero -->
+    <div class="max-w-screen-xl mx-auto px-6 pt-10 pb-8">
+        <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
+            <div>
+                <div class="inline-flex items-center gap-x-2 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 px-4 py-1 text-sm mb-4">
+                    <div class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                    <span class="font-medium">Illinois • 104th General Assembly</span>
+                </div>
+                
+                <h1 class="text-5xl lg:text-6xl leading-[1.05] tracking-tighter font-display font-semibold">
+                    Illinois SB 315<br>
+                    <span class="bg-gradient-to-r from-sky-600 to-blue-600 bg-clip-text text-transparent">AI Safety Measures Act</span>
+                </h1>
+                
+                <p class="mt-4 max-w-xl text-xl text-slate-600 dark:text-slate-400">
+                    One of the strongest state-level frontier AI safety laws in the United States. 
+                    Requires independent third-party audits for the largest AI developers.
+                </p>
+                
+                <div class="mt-6 flex flex-wrap items-center gap-3">
+                    <a href="#requirements" 
+                       class="inline-flex items-center justify-center gap-x-2 bg-slate-900 hover:bg-slate-800 dark:bg-white dark:text-slate-900 dark:hover:bg-slate-200 transition-colors text-white px-6 py-3 rounded-2xl font-semibold text-sm">
+                        <span>Explore Requirements</span>
+                        <i class="fa-solid fa-arrow-down"></i>
+                    </a>
+                    
+                    <button onclick="downloadPDF()" 
+                            class="inline-flex items-center justify-center gap-x-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors px-5 py-3 rounded-2xl font-medium text-sm">
+                        <i class="fa-solid fa-download"></i>
+                        <span>Download Official Text</span>
+                    </button>
+
+                    <a href="https://github.com/YOUR-USERNAME/learn-SB315" target="_blank"
+                       class="inline-flex items-center justify-center gap-x-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors px-4 py-3 rounded-2xl font-medium text-sm">
+                        <i class="fa-brands fa-github"></i>
+                        <span class="hidden sm:inline">View on GitHub</span>
+                    </a>
+                </div>
+                
+                <div class="mt-4 flex items-center gap-x-4 text-sm text-slate-500 dark:text-slate-400">
+                    <div>Sponsored by Sen. <span class="font-medium text-slate-700 dark:text-slate-300">Mary Edly-Allen</span></div>
+                    <div class="hidden sm:block">•</div>
+                    <div>House sponsor: Rep. <span class="font-medium text-slate-700 dark:text-slate-300">Daniel Didech</span></div>
+                </div>
+            </div>
+            
+            <!-- Hero Stats -->
+            <div class="lg:w-80 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6">
+                <div class="grid grid-cols-3 gap-4">
+                    <div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 tracking-wider">PASSED</div>
+                        <div class="mt-1">
+                            <span class="metric text-emerald-600 dark:text-emerald-400">110–0</span>
+                        </div>
+                        <div class="text-xs text-slate-500">House</div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 tracking-wider">PASSED</div>
+                        <div class="mt-1">
+                            <span class="metric text-emerald-600 dark:text-emerald-400">52–5</span>
+                        </div>
+                        <div class="text-xs text-slate-500">Senate</div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-slate-500 dark:text-slate-400 tracking-wider">SIGNED</div>
+                        <div class="mt-1">
+                            <span class="metric text-slate-900 dark:text-white">July 6</span>
+                        </div>
+                        <div class="text-xs text-slate-500">2026</div>
+                    </div>
+                </div>
+                
+                <div class="mt-4 pt-4 border-t border-slate-100 dark:border-slate-800 text-xs flex items-center justify-between">
+                    <div>
+                        <span class="font-semibold text-slate-700 dark:text-slate-300">Effective</span><br>
+                        <span class="text-base font-semibold">Jan 1, 2027</span>
+                    </div>
+                    <div class="text-right">
+                        <div class="inline-block px-2.5 py-px rounded bg-amber-100 dark:bg-amber-900 text-amber-700 dark:text-amber-300 text-[10px] font-medium">PHASED</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quick Facts -->
+    <div class="max-w-screen-xl mx-auto px-6 pb-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="key-fact rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
+                <div class="text-xs font-medium text-slate-500 dark:text-slate-400">APPLIES TO</div>
+                <div class="mt-1 font-semibold text-lg">Frontier Developers</div>
+                <div class="text-xs mt-1 text-slate-500">Companies training the most powerful AI models</div>
+            </div>
+            <div class="key-fact rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
+                <div class="text-xs font-medium text-slate-500 dark:text-slate-400">LANDMARK FEATURE</div>
+                <div class="mt-1 font-semibold text-lg">Mandatory 3rd-Party Audits</div>
+                <div class="text-xs mt-1 text-slate-500">First U.S. state to require independent verification of AI safety claims</div>
+            </div>
+            <div class="key-fact rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
+                <div class="text-xs font-medium text-slate-500 dark:text-slate-400">INCIDENT REPORTING</div>
+                <div class="mt-1 font-semibold text-lg">72 Hours (24h imminent)</div>
+                <div class="text-xs mt-1 text-slate-500">Critical safety incidents must be reported to state</div>
+            </div>
+            <div class="key-fact rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
+                <div class="text-xs font-medium text-slate-500 dark:text-slate-400">PENALTIES</div>
+                <div class="mt-1 font-semibold text-lg">Up to $3M / violation</div>
+                <div class="text-xs mt-1 text-slate-500">Civil penalties • Repeat offenses higher</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Nav -->
+    <div class="sticky top-0 z-50 bg-white/95 dark:bg-slate-950/95 border-b border-slate-200 dark:border-slate-800 nav-sticky">
+        <div class="max-w-screen-xl mx-auto px-6">
+            <div class="flex items-center gap-x-1 overflow-x-auto py-2 text-sm font-medium no-scrollbar">
+                <a href="#overview" class="toc-link px-4 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 whitespace-nowrap">Overview</a>
+                <a href="#applies-to" class="toc-link px-4 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 whitespace-nowrap">Who It Applies To</a>
+                <a href="#requirements" class="toc-link px-4 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 whitespace-nowrap">Key Requirements</a>
+                <a href="#reporting" class="toc-link px-4 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 whitespace-nowrap">Reporting &amp; Whistleblowers</a>
+                <a href="#enforcement" class="toc-link px-4 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 whitespace-nowrap">Enforcement</a>
+                <a href="#timeline" class="toc-link px-4 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 whitespace-nowrap">Timeline</a>
+                <a href="#compare" class="toc-link px-4 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 whitespace-nowrap">Comparisons</a>
+                <a href="#tools" class="toc-link px-4 py-1.5 rounded-xl hover:bg-slate-100 dark:hover:bg-slate-900 whitespace-nowrap">Interactive Tools</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-screen-xl mx-auto px-6 pt-8 pb-16 spa-container">
+        
+        <!-- OVERVIEW -->
+        <section id="overview" class="scroll-mt-20 mb-14">
+            <div class="flex items-center gap-x-3 mb-3">
+                <div class="text-sky-600 dark:text-sky-400"><i class="fa-solid fa-info-circle text-xl"></i></div>
+                <h2 class="section-header text-3xl tracking-tight">Overview</h2>
+            </div>
+            
+            <div class="prose prose-slate dark:prose-invert max-w-none">
+                <p class="text-lg text-slate-600 dark:text-slate-400">
+                    Senate Bill 315 creates the <strong>Artificial Intelligence Safety Measures Act</strong>. It establishes transparency, auditing, and incident reporting obligations for companies developing the most advanced AI models — often called "frontier models."
+                </p>
+                <p>
+                    The law is widely considered one of the strongest state AI safety measures passed in the United States. It builds on similar 2025 legislation in California and New York but adds a first-in-the-nation requirement for <strong>annual independent third-party audits</strong> of AI safety practices.
+                </p>
+            </div>
+            
+            <div class="mt-5 grid md:grid-cols-2 gap-4 text-sm">
+                <div class="rounded-2xl bg-white dark:bg-slate-900 border p-5">
+                    <div class="font-medium mb-2 flex items-center gap-x-2">
+                        <i class="fa-solid fa-bullseye text-emerald-500"></i> 
+                        <span>Core Goal</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400">Require large AI developers to be transparent about catastrophic risks and to have their safety claims independently verified.</p>
+                </div>
+                <div class="rounded-2xl bg-white dark:bg-slate-900 border p-5">
+                    <div class="font-medium mb-2 flex items-center gap-x-2">
+                        <i class="fa-solid fa-handshake text-amber-500"></i> 
+                        <span>Bipartisan Support</span>
+                    </div>
+                    <p class="text-slate-600 dark:text-slate-400">Passed the House unanimously (110-0) and Senate 52-5. Multiple Republican co-sponsors.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WHO IT APPLIES TO -->
+        <section id="applies-to" class="scroll-mt-20 mb-14">
+            <h2 class="section-header text-3xl tracking-tight mb-4">Who It Applies To</h2>
+            
+            <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-7">
+                <div class="mb-6">
+                    <div class="uppercase tracking-[1px] text-xs font-semibold text-sky-600 dark:text-sky-400 mb-1">Covered Entities</div>
+                    <h3 class="font-semibold text-2xl">Large Frontier Developers</h3>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-x-8 gap-y-5">
+                    <div>
+                        <div class="font-medium mb-1.5">Definition</div>
+                        <ul class="space-y-1.5 text-sm text-slate-600 dark:text-slate-300">
+                            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>Entities that train (or begin training) a "frontier model"</span></li>
+                            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>Frontier models = exceptionally large compute + high capability</span></li>
+                            <li class="flex gap-2"><i class="fa-solid fa-check text-emerald-500 mt-1"></i> <span>Examples: OpenAI, Anthropic, Google DeepMind, xAI, and similar</span></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <div class="font-medium mb-1.5">Key Thresholds</div>
+                        <div class="text-sm space-y-2 text-slate-600 dark:text-slate-300">
+                            <div class="flex gap-2 items-start"><span class="font-mono text-sky-600 dark:text-sky-400 text-xs mt-0.5">•</span> High-compute training runs</div>
+                            <div class="flex gap-2 items-start"><span class="font-mono text-sky-600 dark:text-sky-400 text-xs mt-0.5">•</span> Models with potential for catastrophic risk</div>
+                            <div class="flex gap-2 items-start"><span class="font-mono text-sky-600 dark:text-sky-400 text-xs mt-0.5">•</span> "Large" developers (specific quantitative thresholds defined in the bill)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- KEY REQUIREMENTS -->
+        <section id="requirements" class="scroll-mt-20 mb-14">
+            <div class="flex items-end justify-between mb-4">
+                <h2 class="section-header text-3xl tracking-tight">Key Requirements</h2>
+                
+                <!-- Search + Filters -->
+                <div class="hidden md:flex items-center gap-2">
+                    <div class="relative">
+                        <input id="search-input" type="text" placeholder="Search provisions..." 
+                               onkeyup="filterProvisions()"
+                               class="w-64 bg-white dark:bg-slate-900 border border-slate-300 dark:border-slate-700 text-sm rounded-2xl pl-9 py-2 focus:outline-none focus:border-sky-400">
+                        <i class="fa-solid fa-search absolute left-3 top-2.5 text-slate-400"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Filters -->
+            <div class="flex flex-wrap gap-2 mb-5" id="filter-chips">
+                <button onclick="filterByCategory('all')" class="filter-chip filter-active px-4 py-1 text-xs font-medium rounded-2xl border border-sky-500 bg-sky-500 text-white">All</button>
+                <button onclick="filterByCategory('framework')" class="filter-chip px-4 py-1 text-xs font-medium rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">Safety Framework</button>
+                <button onclick="filterByCategory('audit')" class="filter-chip px-4 py-1 text-xs font-medium rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">Audits</button>
+                <button onclick="filterByCategory('transparency')" class="filter-chip px-4 py-1 text-xs font-medium rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">Transparency</button>
+                <button onclick="filterByCategory('reporting')" class="filter-chip px-4 py-1 text-xs font-medium rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">Incident Reporting</button>
+                <button onclick="filterByCategory('whistleblower')" class="filter-chip px-4 py-1 text-xs font-medium rounded-2xl border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900">Whistleblower</button>
+            </div>
+
+            <div id="provisions-container" class="grid md:grid-cols-2 gap-4">
+                <!-- Populated by JS -->
+            </div>
+        </section>
+
+        <!-- REPORTING & WHISTLEBLOWERS -->
+        <section id="reporting" class="scroll-mt-20 mb-14">
+            <h2 class="section-header text-3xl tracking-tight mb-4">Incident Reporting &amp; Whistleblower Protections</h2>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="law-card bg-white dark:bg-slate-900 border rounded-3xl p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <i class="fa-solid fa-exclamation-triangle text-orange-500 text-xl"></i>
+                        <div class="font-semibold">Critical Safety Incident Reporting</div>
+                    </div>
+                    <ul class="text-sm space-y-2 text-slate-600 dark:text-slate-300">
+                        <li>Frontier developers must report critical safety incidents to the Illinois Emergency Management Agency &amp; Office of Homeland Security.</li>
+                        <li><strong>72-hour deadline</strong> after discovery (standard).</li>
+                        <li><strong>24-hour deadline</strong> if the incident poses imminent risk of death or serious physical harm.</li>
+                    </ul>
+                </div>
+                
+                <div class="law-card bg-white dark:bg-slate-900 border rounded-3xl p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <i class="fa-solid fa-user-shield text-emerald-500 text-xl"></i>
+                        <div class="font-semibold">Whistleblower Protections</div>
+                    </div>
+                    <ul class="text-sm space-y-2 text-slate-600 dark:text-slate-300">
+                        <li>Strong protections for employees who report safety concerns in good faith.</li>
+                        <li>Internal reporting processes required at covered companies.</li>
+                        <li>Amends the Illinois Whistleblower Act to explicitly cover violations of this law.</li>
+                        <li>Prohibits retaliation.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ENFORCEMENT -->
+        <section id="enforcement" class="scroll-mt-20 mb-14">
+            <h2 class="section-header text-3xl tracking-tight mb-4">Penalties &amp; Enforcement</h2>
+            
+            <div class="bg-white dark:bg-slate-900 border rounded-3xl p-7">
+                <div class="grid sm:grid-cols-3 gap-6">
+                    <div>
+                        <div class="text-xs font-semibold text-red-500">CIVIL PENALTIES</div>
+                        <div class="mt-2 text-3xl font-semibold tracking-tighter">$1,000,000</div>
+                        <div class="text-sm text-slate-500">per violation</div>
+                        
+                        <div class="mt-4">
+                            <div class="text-xs font-semibold text-red-500">REPEAT VIOLATIONS</div>
+                            <div class="mt-1 text-3xl font-semibold tracking-tighter">$3,000,000</div>
+                        </div>
+                    </div>
+                    
+                    <div class="sm:col-span-2 text-sm">
+                        <div class="font-medium mb-2">Key Details</div>
+                        <ul class="space-y-1 text-slate-600 dark:text-slate-300">
+                            <li>• Administered by Illinois Emergency Management Agency (IEMA) and Office of Homeland Security in consultation with the Attorney General.</li>
+                            <li>• No private right of action (individuals cannot sue directly under this law).</li>
+                            <li>• Certain information is exempt from FOIA disclosure to protect sensitive safety data.</li>
+                            <li>• The state may issue rules and guidance.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE -->
+        <section id="timeline" class="scroll-mt-20 mb-14">
+            <h2 class="section-header text-3xl tracking-tight mb-5">Timeline</h2>
+            
+            <div class="relative pl-6 border-l-2 border-slate-200 dark:border-slate-700 space-y-8">
+                <div class="relative">
+                    <div class="absolute -left-[9px] w-4 h-4 bg-emerald-500 rounded-full timeline-dot"></div>
+                    <div class="font-semibold">July 6, 2026</div>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">Governor JB Pritzker signs SB 315 into law (Public Act 104-0538)</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[9px] w-4 h-4 bg-slate-400 rounded-full timeline-dot"></div>
+                    <div class="font-semibold">June 26, 2026</div>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">Bill sent to the Governor</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[9px] w-4 h-4 bg-slate-400 rounded-full timeline-dot"></div>
+                    <div class="font-semibold">May 27, 2026</div>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">House passes 110–0</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[9px] w-4 h-4 bg-slate-400 rounded-full timeline-dot"></div>
+                    <div class="font-semibold">May 21, 2026</div>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">Senate passes 52–5</div>
+                </div>
+                <div class="relative">
+                    <div class="absolute -left-[9px] w-4 h-4 bg-slate-300 rounded-full timeline-dot"></div>
+                    <div class="font-semibold">January 1, 2027</div>
+                    <div class="text-sm text-slate-600 dark:text-slate-400">Law takes effect (most provisions)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- COMPARISONS -->
+        <section id="compare" class="scroll-mt-20 mb-14">
+            <h2 class="section-header text-3xl tracking-tight mb-4">How Illinois Compares</h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm border-collapse">
+                    <thead>
+                        <tr class="border-b border-slate-200 dark:border-slate-700">
+                            <th class="text-left py-3 px-4 font-medium">Jurisdiction</th>
+                            <th class="text-left py-3 px-4 font-medium">Transparency</th>
+                            <th class="text-left py-3 px-4 font-medium">Audits</th>
+                            <th class="text-left py-3 px-4 font-medium">Incident Reporting</th>
+                            <th class="text-left py-3 px-4 font-medium">Notes</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800">
+                        <tr>
+                            <td class="px-4 py-3 font-medium">Illinois SB 315</td>
+                            <td class="px-4 py-3"><span class="text-emerald-600">✓ Required</span></td>
+                            <td class="px-4 py-3"><span class="text-emerald-600 font-semibold">✓ Mandatory independent 3rd-party</span></td>
+                            <td class="px-4 py-3"><span class="text-emerald-600">✓ Strict (72h / 24h)</span></td>
+                            <td class="px-4 py-3 text-xs">Strongest state audit requirement to date</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium">California (SB 53 / 2025)</td>
+                            <td class="px-4 py-3"><span class="text-emerald-600">✓ Required</span></td>
+                            <td class="px-4 py-3 text-slate-400">Voluntary / limited</td>
+                            <td class="px-4 py-3"><span class="text-emerald-600">✓</span></td>
+                            <td class="px-4 py-3 text-xs">Earlier frontier model law</td>
+                        </tr>
+                        <tr>
+                            <td class="px-4 py-3 font-medium">New York</td>
+                            <td class="px-4 py-3"><span class="text-emerald-600">✓ Required</span></td>
+                            <td class="px-4 py-3 text-slate-400">Voluntary / limited</td>
+                            <td class="px-4 py-3"><span class="text-emerald-600">✓</span></td>
+                            <td class="px-4 py-3 text-xs">Similar transparency focus</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE TOOLS -->
+        <section id="tools" class="scroll-mt-20 mb-14">
+            <h2 class="section-header text-3xl tracking-tight mb-4">Interactive Tools</h2>
+            
+            <div class="grid lg:grid-cols-2 gap-6">
+                <!-- Role Explainer -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6">
+                    <h3 class="font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-users text-sky-500"></i> What does this mean for me?</h3>
+                    
+                    <div class="space-y-2">
+                        <div onclick="showRoleModal('company')" class="cursor-pointer flex items-center justify-between px-4 py-3 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-2xl text-sm">
+                            <span><strong>AI Company / Developer</strong></span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </div>
+                        <div onclick="showRoleModal('public')" class="cursor-pointer flex items-center justify-between px-4 py-3 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-2xl text-sm">
+                            <span><strong>Public / Researcher</strong></span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </div>
+                        <div onclick="showRoleModal('policymaker')" class="cursor-pointer flex items-center justify-between px-4 py-3 bg-slate-50 dark:bg-slate-800 hover:bg-slate-100 dark:hover:bg-slate-700 rounded-2xl text-sm">
+                            <span><strong>Policymaker / Regulator</strong></span>
+                            <i class="fa-solid fa-chevron-right text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Compliance Checklist -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl p-6">
+                    <h3 class="font-semibold mb-3 flex items-center gap-2"><i class="fa-solid fa-list-check text-sky-500"></i> Developer Compliance Checklist</h3>
+                    <div class="text-xs text-slate-500 mb-3">Check items as you track compliance. Saved in your browser.</div>
+                    
+                    <div id="checklist" class="space-y-1.5 text-sm"></div>
+                    
+                    <button onclick="resetChecklist()" class="text-xs mt-3 text-red-500 hover:text-red-600 flex items-center gap-1">
+                        <i class="fa-solid fa-undo"></i> <span>Reset checklist</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sources -->
+        <section class="mb-10">
+            <h3 class="font-semibold mb-3 text-sm tracking-wider text-slate-500">OFFICIAL SOURCES &amp; FURTHER READING</h3>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-3 gap-y-1 text-sm">
+                <a href="https://www.ilga.gov/Legislation/BillStatus?DocNum=315&DocTypeID=SB&GA=104&GAID=18&SessionID=114" target="_blank" class="flex items-center gap-2 hover:text-sky-600">• Official Bill Status (ILGA)</a>
+                <a href="https://legiscan.com/IL/bill/SB0315/2025" target="_blank" class="flex items-center gap-2 hover:text-sky-600">• LegiScan SB 315</a>
+                <a href="https://www.ilga.gov/documents/legislation/104/SB/PDF/10400SB0315eng.pdf" target="_blank" class="flex items-center gap-2 hover:text-sky-600">• Enrolled / Engrossed Text (PDF)</a>
+                <a href="https://www.wired.com/story/illinois-pass-major-ai-safety-law-pritzker/" target="_blank" class="flex items-center gap-2 hover:text-sky-600">• WIRED Coverage</a>
+                <a href="https://www.transparencycoalition.ai/news/illinois-lawmakers-send-significant-ai-frontier-model-safety-bill-to-gov-pritzker" target="_blank" class="flex items-center gap-2 hover:text-sky-600">• Transparency Coalition</a>
+            </div>
+        </section>
+
+        <div class="text-[10px] text-center text-slate-400 dark:text-slate-500 pt-4 border-t">
+            This is an <strong>unofficial interactive guide</strong> created for educational and reference purposes. 
+            Always refer to the official Illinois General Assembly text and Public Act 104-0538 for legal compliance.
+            <br>Last updated: July 2026.
+        </div>
+    </div>
+
+    <!-- Role Modal -->
+    <div id="role-modal" onclick="closeRoleModal()" class="hidden fixed inset-0 bg-black/60 flex items-center justify-center z-[100]">
+        <div onclick="event.stopImmediatePropagation()" class="bg-white dark:bg-slate-900 rounded-3xl max-w-md w-full mx-4 p-6 border">
+            <div class="flex justify-between items-center mb-4">
+                <div id="modal-title" class="font-semibold text-lg"></div>
+                <button onclick="closeRoleModal()" class="text-xl leading-none text-slate-400 hover:text-slate-600">×</button>
+            </div>
+            <div id="modal-body" class="text-sm text-slate-600 dark:text-slate-300 leading-relaxed"></div>
+            <div class="mt-4 pt-4 border-t text-xs">
+                <button onclick="closeRoleModal()" class="text-sky-600 hover:text-sky-700 font-medium">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind script
+        function initTailwind() {
+            document.documentElement.classList.add('dark');
+            
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        fontFamily: {
+                            'display': ['Space Grotesk', 'Inter', 'system-ui', 'sans-serif']
+                        }
+                    }
+                }
+            };
+        }
+
+        // Provisions Data
+        const provisions = [
+            {
+                id: "framework",
+                category: "framework",
+                title: "Frontier AI Safety Framework",
+                summary: "Create, implement, publish, and annually update a comprehensive AI safety framework.",
+                detail: "The framework must address catastrophic-risk assessment, mitigation measures, governance structures, cybersecurity protections, third-party evaluations, and risks from internal use of frontier models."
+            },
+            {
+                id: "audit",
+                category: "audit",
+                title: "Annual Independent Third-Party Audits",
+                summary: "Undergo annual audits by independent third parties verifying compliance with the safety framework.",
+                detail: "This is the most significant new requirement. Audits must follow specific standards for access, reporting, retention, and public disclosure of results. One of the first laws in the U.S. to mandate external verification."
+            },
+            {
+                id: "transparency",
+                category: "transparency",
+                title: "Pre-Deployment Transparency Reports",
+                summary: "Publish reports before deploying new or substantially modified frontier models.",
+                detail: "Reports must include information about model capabilities, intended uses, risk disclosures, and summaries of catastrophic-risk assessments."
+            },
+            {
+                id: "incident",
+                category: "reporting",
+                title: "Critical Safety Incident Reporting",
+                summary: "Report critical safety incidents within strict timeframes.",
+                detail: "Must notify the Illinois Emergency Management Agency and Office of Homeland Security within 72 hours (or 24 hours for imminent threats of death or serious harm)."
+            },
+            {
+                id: "internal",
+                category: "reporting",
+                title: "Internal-Use Risk Assessments",
+                summary: "Submit periodic summaries of assessments of catastrophic risks from internal use of frontier models.",
+                detail: "Large frontier developers must provide regular summaries of how they evaluate and address risks when models are used internally."
+            },
+            {
+                id: "whistleblower",
+                category: "whistleblower",
+                title: "Whistleblower Protections",
+                summary: "Protect employees who report safety violations in good faith.",
+                detail: "Includes internal reporting processes and amendments to the Illinois Whistleblower Act prohibiting retaliation against covered employees."
+            },
+            {
+                id: "governance",
+                category: "framework",
+                title: "Governance & Cybersecurity Requirements",
+                summary: "Include robust internal governance and cybersecurity measures in the safety framework.",
+                detail: "Companies must document how they govern AI development and protect against security threats that could lead to catastrophic outcomes."
+            }
+        ];
+
+        // Render Provisions
+        function renderProvisions(filtered = provisions) {
+            const container = document.getElementById('provisions-container');
+            container.innerHTML = '';
+            
+            filtered.forEach(p => {
+                const div = document.createElement('div');
+                div.className = `provision law-card bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-3xl p-5 provision-card`;
+                div.dataset.category = p.category;
+                div.dataset.id = p.id;
+                div.id = p.id;
+                
+                div.innerHTML = `
+                    <div class="flex justify-between items-start gap-3">
+                        <div>
+                            <div class="font-semibold text-lg leading-tight">${p.title}</div>
+                            <div class="text-sky-600 dark:text-sky-400 text-xs font-medium mt-1 tracking-wider">${p.category.toUpperCase()}</div>
+                        </div>
+                        <button onclick="toggleProvision(this)" class="text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 mt-0.5">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                    </div>
+                    <div class="mt-3 text-sm text-slate-600 dark:text-slate-300">
+                        ${p.summary}
+                    </div>
+                    <div class="hidden mt-3 pt-3 border-t text-sm legal-text text-slate-600 dark:text-slate-300" id="detail-${p.id}">
+                        ${p.detail}
+                    </div>
+                    <div class="mt-3 flex items-center gap-2">
+                        <button onclick="copyProvisionLink('${p.id}', this)" class="text-xs flex items-center gap-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300">
+                            <i class="fa-solid fa-link"></i> <span class="hidden sm:inline">Copy link</span>
+                        </button>
+                    </div>
+                `;
+                container.appendChild(div);
+            });
+        }
+
+        function filterProvisions() {
+            const query = document.getElementById('search-input').value.toLowerCase().trim();
+            const cards = document.querySelectorAll('#provisions-container > div');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('.font-semibold').textContent.toLowerCase();
+                const summary = card.querySelector('.text-sm.text-slate-600').textContent.toLowerCase();
+                
+                const matches = title.includes(query) || summary.includes(query);
+                card.style.display = matches ? '' : 'none';
+            });
+        }
+
+        let currentFilter = 'all';
+
+        function filterByCategory(category) {
+            currentFilter = category;
+            
+            // Update active chip styles
+            document.querySelectorAll('#filter-chips button').forEach(btn => {
+                btn.classList.remove('filter-active', 'bg-sky-500', 'text-white', 'border-sky-500');
+                btn.classList.add('border-slate-300', 'dark:border-slate-700');
+                
+                if (category === 'all' && btn.textContent === 'All') {
+                    btn.classList.add('filter-active', 'bg-sky-500', 'text-white', 'border-sky-500');
+                    btn.classList.remove('border-slate-300', 'dark:border-slate-700');
+                } else if (btn.textContent.toLowerCase().includes(category)) {
+                    btn.classList.add('filter-active', 'bg-sky-500', 'text-white', 'border-sky-500');
+                    btn.classList.remove('border-slate-300', 'dark:border-slate-700');
+                }
+            });
+            
+            const cards = document.querySelectorAll('#provisions-container > div');
+            const query = document.getElementById('search-input').value.toLowerCase();
+            
+            cards.forEach(card => {
+                const cardCat = card.dataset.category;
+                const title = card.querySelector('.font-semibold').textContent.toLowerCase();
+                const summary = card.querySelector('.text-sm.text-slate-600').textContent.toLowerCase();
+                
+                const matchesSearch = !query || title.includes(query) || summary.includes(query);
+                const matchesCategory = category === 'all' || cardCat === category;
+                
+                card.style.display = (matchesSearch && matchesCategory) ? '' : 'none';
+            });
+        }
+
+        function toggleProvision(btn) {
+            const card = btn.closest('.provision-card');
+            const detail = card.querySelector('[id^="detail-"]');
+            
+            if (detail.classList.contains('hidden')) {
+                detail.classList.remove('hidden');
+                btn.innerHTML = '<i class="fa-solid fa-chevron-up"></i>';
+            } else {
+                detail.classList.add('hidden');
+                btn.innerHTML = '<i class="fa-solid fa-chevron-down"></i>';
+            }
+        }
+
+        function copyProvisionLink(id, element) {
+            const url = `${window.location.origin}${window.location.pathname}#${id}`;
+            navigator.clipboard.writeText(url).then(() => {
+                const originalText = element.innerHTML;
+                element.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+                setTimeout(() => {
+                    element.innerHTML = originalText;
+                }, 1600);
+            });
+        }
+
+        // Role Modals
+        const roleContent = {
+            company: {
+                title: "For AI Companies & Developers",
+                body: "If you train frontier models, you must:<br><br>• Publish a detailed safety framework and update it annually<br>• Undergo independent third-party audits every year<br>• Publish transparency reports before major model releases<br>• Report critical safety incidents within 72 hours (24h for imminent harm)<br><br>Non-compliance can result in civil penalties up to $1M–$3M per violation. Many experts expect the Big Four accounting firms and specialized AI evaluators (METR, etc.) to perform the audits."
+            },
+            public: {
+                title: "For the Public & Researchers",
+                body: "The law increases public visibility into the safety practices of the largest AI labs. Expect:<br><br>• Published safety frameworks and audit summaries<br>• Better transparency about capabilities and risks<br>• A public record of critical incidents<br><br>This is intended to help researchers, journalists, and civil society hold powerful AI developers accountable."
+            },
+            policymaker: {
+                title: "For Policymakers & Regulators",
+                body: "Illinois has created one of the strongest state models for frontier AI oversight. Key features to watch:<br><br>• How the state implements the independent audit requirement<br>• What standards auditors use<br>• How incident reporting systems function in practice<br><br>Many view this as a potential template for future federal or multi-state policy."
+            }
+        };
+
+        function showRoleModal(role) {
+            const modal = document.getElementById('role-modal');
+            const titleEl = document.getElementById('modal-title');
+            const bodyEl = document.getElementById('modal-body');
+            
+            const content = roleContent[role];
+            titleEl.innerHTML = content.title;
+            bodyEl.innerHTML = content.body;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+        
+        function closeRoleModal() {
+            const modal = document.getElementById('role-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
+
+        // Compliance Checklist
+        const checklistItems = [
+            "Publish annual safety framework",
+            "Complete independent third-party audit",
+            "Publish transparency reports before deployment",
+            "Establish 72-hour incident reporting process",
+            "Implement whistleblower protections & internal reporting",
+            "Create internal catastrophic risk assessment process",
+            "Maintain required records for audits"
+        ];
+
+        function renderChecklist() {
+            const container = document.getElementById('checklist');
+            container.innerHTML = '';
+            
+            checklistItems.forEach((item, index) => {
+                const key = `sb315_check_${index}`;
+                const checked = localStorage.getItem(key) === 'true';
+                
+                const div = document.createElement('div');
+                div.className = `flex items-center gap-2 px-1 py-0.5 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 cursor-pointer`;
+                
+                div.innerHTML = `
+                    <input type="checkbox" id="check-${index}" ${checked ? 'checked' : ''} 
+                           class="w-4 h-4 accent-sky-600">
+                    <label for="check-${index}" class="text-sm flex-1 cursor-pointer">${item}</label>
+                `;
+                
+                const input = div.querySelector('input');
+                input.addEventListener('change', () => {
+                    localStorage.setItem(key, input.checked);
+                });
+                
+                container.appendChild(div);
+            });
+        }
+
+        function resetChecklist() {
+            checklistItems.forEach((_, index) => {
+                localStorage.removeItem(`sb315_check_${index}`);
+            });
+            renderChecklist();
+        }
+
+        // Download helper (opens official PDF links)
+        function downloadPDF() {
+            window.open('https://www.ilga.gov/documents/legislation/104/SB/PDF/10400SB0315eng.pdf', '_blank');
+        }
+
+        // Smooth scroll for nav
+        function initSmoothScroll() {
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        e.preventDefault();
+                        const offset = 70;
+                        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                        window.scrollTo({ top, behavior: 'smooth' });
+                    }
+                });
+            });
+        }
+
+        // Initialize everything
+        function initSPA() {
+            initTailwind();
+            
+            // Render provisions
+            renderProvisions();
+            
+            // Render checklist
+            renderChecklist();
+            
+            // Smooth scroll
+            initSmoothScroll();
+            
+            // Keyboard support for search
+            const search = document.getElementById('search-input');
+            if (search) {
+                search.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape') {
+                        this.value = '';
+                        filterProvisions();
+                    }
+                });
+            }
+            
+            // Initial filter state
+            document.querySelector('#filter-chips button').classList.add('filter-active', 'bg-sky-500', 'text-white', 'border-sky-500');
+            
+            // Make provisions searchable immediately
+            console.log('%c[SB 315 SPA] Interactive landing page initialized successfully.', 'color:#64748b');
+            
+            // Optional: deep link to a provision if hash present
+            if (window.location.hash) {
+                setTimeout(() => {
+                    const id = window.location.hash.replace('#', '');
+                    const card = document.querySelector(`[data-id="${id}"]`);
+                    if (card) {
+                        card.scrollIntoView({ behavior: "smooth", block: "center" });
+                        const detail = card.querySelector('[id^="detail-"]');
+                        if (detail) detail.classList.remove('hidden');
+                    }
+                }, 650);
+            }
+        }
+
+        // Boot
+        window.onload = initSPA;
+        
+        // Bonus: Allow pressing "/" to focus search
+        document.addEventListener('keydown', function(e) {
+            if (e.key === '/' && document.activeElement.tagName === 'BODY') {
+                const search = document.getElementById('search-input');
+                if (search) {
+                    e.preventDefault();
+                    search.focus();
+                }
+            }
+        });
+    </script>
+</body>
+</html>
