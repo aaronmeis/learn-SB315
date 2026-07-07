@@ -84,8 +84,7 @@ learn-SB315/
 ├── README.md
 ├── LICENSE
 ├── .gitignore
-├── .nojekyll           # For GitHub Pages
-└── (optional agent context files)
+└── .nojekyll           # For GitHub Pages
 ```
 
 ## Sources & References
