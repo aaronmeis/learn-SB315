@@ -188,6 +188,13 @@
                         <i class="fa-brands fa-github"></i>
                         <span class="hidden sm:inline">View on GitHub</span>
                     </a>
+
+                    <!-- Theme toggle -->
+                    <button onclick="toggleTheme()" 
+                            class="inline-flex items-center justify-center gap-x-2 border border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors px-3 py-3 rounded-2xl font-medium text-sm w-10"
+                            title="Toggle light/dark theme" aria-label="Toggle theme">
+                        <i id="theme-icon" class="fa-solid fa-sun text-lg"></i>
+                    </button>
                 </div>
                 
                 <div class="mt-4 flex items-center gap-x-4 text-sm text-slate-500 dark:text-slate-400">
@@ -242,22 +249,22 @@
             <div class="key-fact rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
                 <div class="text-xs font-medium text-slate-500 dark:text-slate-400">APPLIES TO</div>
                 <div class="mt-1 font-semibold text-lg">Frontier Developers</div>
-                <div class="text-xs mt-1 text-slate-500">Companies training the most powerful AI models</div>
+                <div class="text-xs mt-1 text-slate-600 dark:text-slate-400">Companies training the most powerful AI models</div>
             </div>
             <div class="key-fact rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
                 <div class="text-xs font-medium text-slate-500 dark:text-slate-400">LANDMARK FEATURE</div>
                 <div class="mt-1 font-semibold text-lg">Mandatory 3rd-Party Audits</div>
-                <div class="text-xs mt-1 text-slate-500">First U.S. state to require independent verification of AI safety claims</div>
+                <div class="text-xs mt-1 text-slate-600 dark:text-slate-400">First U.S. state to require independent verification of AI safety claims</div>
             </div>
             <div class="key-fact rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
                 <div class="text-xs font-medium text-slate-500 dark:text-slate-400">INCIDENT REPORTING</div>
                 <div class="mt-1 font-semibold text-lg">72 Hours (24h imminent)</div>
-                <div class="text-xs mt-1 text-slate-500">Critical safety incidents must be reported to state</div>
+                <div class="text-xs mt-1 text-slate-600 dark:text-slate-400">Critical safety incidents must be reported to state</div>
             </div>
             <div class="key-fact rounded-2xl border border-slate-200 dark:border-slate-800 p-4">
                 <div class="text-xs font-medium text-slate-500 dark:text-slate-400">PENALTIES</div>
                 <div class="mt-1 font-semibold text-lg">Up to $3M / violation</div>
-                <div class="text-xs mt-1 text-slate-500">Civil penalties • Repeat offenses higher</div>
+                <div class="text-xs mt-1 text-slate-600 dark:text-slate-400">Civil penalties • Repeat offenses higher</div>
             </div>
         </div>
     </div>
@@ -608,7 +615,15 @@
     <script>
         // Tailwind script
         function initTailwind() {
-            document.documentElement.classList.add('dark');
+            // Respect saved preference or system preference (light by default if not set)
+            const savedTheme = localStorage.getItem('sb315-theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            
+            if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+                document.documentElement.classList.add('dark');
+            } else {
+                document.documentElement.classList.remove('dark');
+            }
             
             tailwind.config = {
                 darkMode: 'class',
@@ -620,6 +635,31 @@
                     }
                 }
             };
+        }
+
+        function toggleTheme() {
+            const html = document.documentElement;
+            const isDark = html.classList.contains('dark');
+            
+            if (isDark) {
+                html.classList.remove('dark');
+                localStorage.setItem('sb315-theme', 'light');
+            } else {
+                html.classList.add('dark');
+                localStorage.setItem('sb315-theme', 'dark');
+            }
+            
+            // Update toggle icon if present
+            updateThemeIcon();
+        }
+
+        function updateThemeIcon() {
+            const icon = document.getElementById('theme-icon');
+            if (!icon) return;
+            const isDark = document.documentElement.classList.contains('dark');
+            icon.className = isDark 
+                ? 'fa-solid fa-sun text-lg' 
+                : 'fa-solid fa-moon text-lg';
         }
 
         // Provisions Data
@@ -885,6 +925,7 @@
         // Initialize everything
         function initSPA() {
             initTailwind();
+            updateThemeIcon();
             
             // Render provisions
             renderProvisions();
